@@ -46,3 +46,25 @@ const logWeather = ({ date, weather}: { date: Date; weather: string }): void => 
 }
 
 logWeather(forecast)
+
+
+// annotations around objects
+
+const profile = {
+
+    name: "Kennedy",
+    age: 22,
+    coords: {
+        lat: 0,
+        long: 15
+    },
+    setAge(age: number): void {
+        this.age = age
+    }
+}
+
+
+const { age }: { age: number} = profile
+
+const { coords: {lat, long} }: { coords: {lat: number; long: number}} = profile
+

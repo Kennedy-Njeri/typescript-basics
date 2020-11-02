@@ -24,21 +24,25 @@ const vehicle = new Vehicle('red')
 // run ts-node classes.ts
 
 
-// inheritance of classes
-// class Car extends Vehicle{
-//
-//     // theis method can only be called by other methods in the class
-//     private drive(): void {
-//         console.log("fast it is")
-//     }
-//
-//     startDriving(): void{
-//         this.drive()
-//         this.driveSlow()
-//     }
-// }
-//
-//
-// const car = new Car()
-//
-// car.startDriving()
+//inheritance of classes
+class Car extends Vehicle{
+
+    constructor(public wheels: number, color: string) {
+        super(color)
+    }
+
+    // this method can only be called by other methods in the class
+    private drive(): void {
+        console.log("fast it is")
+    }
+
+    startDriving(): void{
+        this.drive()
+        this.driveSlow()
+    }
+}
+
+
+const car = new Car(4, 'red')
+
+car.startDriving()

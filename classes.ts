@@ -1,5 +1,11 @@
 // instance method modifiers
 class Vehicle {
+
+    constructor(public color: string) {
+        this.color = color
+    }
+
+
     // method can be called any where any time
     public driveFast(): void {
         console.log("drive fast")
@@ -11,26 +17,28 @@ class Vehicle {
     }
 }
 
+const vehicle = new Vehicle('red')
+
 
 
 // run ts-node classes.ts
 
 
 // inheritance of classes
-class Car extends Vehicle{
-
-    // theis method can only be called by other methods in the class
-    private drive(): void {
-        console.log("fast it is")
-    }
-
-    startDriving(): void{
-        this.drive()
-        this.driveSlow()
-    }
-}
-
-
-const car = new Car()
-
-car.startDriving()
+// class Car extends Vehicle{
+//
+//     // theis method can only be called by other methods in the class
+//     private drive(): void {
+//         console.log("fast it is")
+//     }
+//
+//     startDriving(): void{
+//         this.drive()
+//         this.driveSlow()
+//     }
+// }
+//
+//
+// const car = new Car()
+//
+// car.startDriving()

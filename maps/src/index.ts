@@ -11,8 +11,6 @@
 // console.log(company)
 
 
-
-
 new google.maps.Map(document.getElementById('map'), {
     zoom: 1,
     center: {

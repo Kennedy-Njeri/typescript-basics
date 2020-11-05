@@ -1,6 +1,7 @@
 import faker from 'faker'
 
 
+
 export class User {
     name: string
     location: {
